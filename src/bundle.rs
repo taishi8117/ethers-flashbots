@@ -233,7 +233,7 @@ impl BundleRequest {
 ///
 /// Details for a transaction that has been simulated as part of
 /// a bundle.
-#[derive(Debug, Clone, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SimulatedTransaction {
     /// The transaction hash
     #[serde(rename = "txHash")]
@@ -289,7 +289,7 @@ impl SimulatedTransaction {
 /// Details of a simulated bundle.
 ///
 /// The details of a bundle that has been simulated.
-#[derive(Debug, Clone, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SimulatedBundle {
     /// The bundle's hash.
     #[serde(rename = "bundleHash")]
@@ -341,7 +341,7 @@ impl SimulatedBundle {
 /// See [Flashbots docs][fb_getbundlestats] for more information.
 ///
 /// [fb_getbundlestats]: https://docs.flashbots.net/flashbots-auction/searchers/advanced/rpc-endpoint/#flashbots_getbundlestats
-#[derive(Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Debug)]
 #[serde(rename_all = "camelCase")]
 pub struct BundleStats {
     /// Whether the bundle was simulated.
