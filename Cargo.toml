@@ -32,11 +32,11 @@ futures-core = "0.3"
 pin-project = "1"
 
 # Ethers
-ethers = { version = "1.0.0", default-features = false }
+ethers = { git = "https://github.com/gakonst/ethers-rs", rev = "123e2def9d96668e202d7b11842821c7f4080283", default-features = false }
 
 [dev-dependencies]
 tokio = { version = "1.21.2", features = ["macros", "rt-multi-thread"] }
-ethers = { version = "1.0.0", default-features = false }
+ethers = { git = "https://github.com/gakonst/ethers-rs", rev = "123e2def9d96668e202d7b11842821c7f4080283", default-features = false }
 eyre = "0.6"
 
 [features]
